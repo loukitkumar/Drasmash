@@ -3,7 +3,7 @@ import RoomList from "./RoomList";
 import RoomModal from "./components/RoomModal";
 import AuthContext from "./context/auth";
 
-import classes from "./Room.module.css";
+import classes from "./Rooms.module.css";
 
 function Rooms(props) {
   const [rooms, setRooms] = useState([{ id: "1122333", name: "china" }]);
@@ -14,7 +14,10 @@ function Rooms(props) {
   const handleClose = () => setOpen(false);
 
   const addHandler = (enteredRoomName) => {
-    const newRoom = { name: enteredRoomName, id: Math.random().toString() };
+    const newRoom = {
+      name: enteredRoomName,
+      id: Math.random().toString(),
+    };
     setRooms((prevRooms) => {
       return [...prevRooms, { ...newRoom }];
     });
@@ -49,7 +52,7 @@ function Rooms(props) {
   return (
     <div className={classes.Room}>
       <h2>Welcome to</h2>
-      <h1>Drawasaurus!</h1>
+      <h1>Drasmash!</h1>
       <div className={classes.buttons}>
         <button className={classes.quickPlay} onClick={quickPlayHandler}>
           Quick Play
@@ -57,6 +60,9 @@ function Rooms(props) {
         <button onClick={handleOpen} className={classes.createRoom}>
           Create Room
         </button>
+      </div>
+      <div className={classes.roomsTitle}>
+        <h2 style={{ color: "white" }}>Rooms</h2>
       </div>
       <RoomModal
         open={open}

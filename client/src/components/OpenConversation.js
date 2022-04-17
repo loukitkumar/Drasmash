@@ -26,6 +26,19 @@ function OpenConversation(props) {
 
     const message = { text, fromMe: true, senderName: authCtx.userName };
 
+    if (
+      !props.isYou &&
+      text.toLowerCase() === props.selectedWord.toLowerCase()
+    ) {
+      // props.increaseScore();
+      setText("");
+      if (props.scored.includes(authCtx.id)) {
+        return;
+      }
+      authCtx.socket.emit("increase-score", authCtx.id, props.groupId);
+      return;
+    }
+
     setMessages((prevMessages) => [...prevMessages, message]);
 
     authCtx.socket.emit("send-message", props.groupId, {

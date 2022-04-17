@@ -45,7 +45,7 @@ function Model() {
               Welcome to
             </span>
             <span className={`${classes.title} ${classes.logo}`}>
-              Drawasaurus!
+              Drasmash!
             </span>
             <form onSubmit={submitHandler}>
               <input
@@ -67,7 +67,7 @@ function Model() {
           </div>
           <div className={classes.description}>
             <p>
-              <strong>Drawasaurus</strong> is a drawing &amp; guessing game for
+              <strong>Drasmash</strong> is a drawing &amp; guessing game for
               your phone, tablet or PC. Do your best to draw the word you are
               given while players from around the world try to guess it!
             </p>

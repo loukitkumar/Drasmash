@@ -14,7 +14,7 @@ function NavBar() {
           <a href="/">
             <img src="./color-palette.png" />{" "}
             <span>
-              <h2>Drawasaurus</h2>
+              <h2>Drasmash</h2>
             </span>
           </a>
         </li>
